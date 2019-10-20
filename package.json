@@ -1,0 +1,26 @@
+{
+  "name": "graphql-test",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha --recursive --require @babel/register --timeout=9999999 __tests__/*.spec.js --exit"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@babel/cli": "^7.2.3",
+    "@babel/core": "^7.5.5",
+    "@babel/plugin-proposal-class-properties": "^7.5.5",
+    "@babel/preset-env": "^7.5.5",
+    "@babel/register": "^7.6.2",
+    "graphql": "^14.5.8",
+    "graphql-import": "^0.7.1",
+    "graphql-import-node": "0.0.4",
+    "graphql-tag": "^2.10.1",
+    "graphql-tools": "^4.0.5",
+    "graphql.macro": "^1.4.2",
+    "mocha": "^6.2.2",
+    "node-fetch": "^2.6.0"
+  }
+}
