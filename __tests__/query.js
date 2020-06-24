@@ -1,11 +1,11 @@
 import gql from 'graphql-tag';
-import { data } from './fragments';
+import { liftFragment } from '../fragments/liftFragment';
 
-export const COMMON_QUERY = gql`
-  ${data}
+export const QUERY = gql`
+  ${liftFragment}
   query {
     Lift(id: "panorama") {
-      ...data
+      ...liftFragment
     }
     Trail(id: "grandma") {
       trees
