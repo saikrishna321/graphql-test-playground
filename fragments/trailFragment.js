@@ -7,6 +7,7 @@ export const accessedByLifts = gql`
         name
         groomed
         night
+        trees
       }
     }
   }
