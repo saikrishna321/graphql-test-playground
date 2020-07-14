@@ -6,7 +6,8 @@ import TrailAssertions from '../assertions/TrailAssertions';
 
 async function skiResorts(fn) {
   const variables = {
-    id: "panorama"
+    lift: "panorama",
+    trail: "grandma"
   }
   const payload = JSON.stringify({ query: print(QUERY), variables });
   const url = 'https://snowtooth.moonhighway.com/';

@@ -4,11 +4,11 @@ import { accessedByLifts } from '../fragments/trailFragment';
 export const QUERY = gql`
   ${liftFragment}
   ${accessedByLifts}
-  query allData($id: ID!) {
-    Lift(id: $id) {
+  query allData($lift: ID!, $trail: ID!) {
+    Lift(id: $lift) {
       ...liftFragment
     }
-    Trail(id: "grandma") {
+    Trail(id: $trail) {
       trees
       name
       trees
