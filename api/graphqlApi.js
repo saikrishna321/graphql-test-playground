@@ -5,7 +5,10 @@ import LiftAssertions from '../assertions/LiftAssertions';
 import TrailAssertions from '../assertions/TrailAssertions';
 
 async function skiResorts(fn) {
-  const payload = JSON.stringify({ query: print(QUERY) });
+  const variables = {
+    id: "panorama"
+  }
+  const payload = JSON.stringify({ query: print(QUERY), variables });
   const url = 'https://snowtooth.moonhighway.com/';
   const opts = {
     method: 'POST',
