@@ -1,15 +1,11 @@
 import find from '../api/graphqlApi';
 import Joi from '@hapi/joi';
-const LiftStatus = {
-  OPEN: 'OPEN',
-  CLOSED: 'CLOSED',
-  HOLD: 'HOLD',
-};
+import { LiftStatus } from '../enums/liftStatuses'
 
 it('Should be able to fine ski resorts', async () => {
   await find.skiResorts(async ({ lift, trail }) => {
     lift.shouldHaveLiftCapacity(8);
-    lift.shouldHaveStatus(LiftStatus.HOLD);
+    lift.shouldHaveStatus(LiftStatus.Open);
     lift.shouldHaveName('Panorama');
 
     trail.isTrees(true);
@@ -28,7 +24,7 @@ it('Should be able to verify Trail Schema', async () => {
       trailAccess: Joi.array()
     })),
   });
-  await find.skiResorts(async ({ trail }) => {
-    await trail.validate(schema);
+  await find.skiResorts(async ({ response }) => {
+    await schema.validateAsync(response.data.Trail);
   });
 });

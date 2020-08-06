@@ -1,6 +1,6 @@
 import gql from 'graphql-tag';
-import { liftFragment } from '../fragments/liftFragment';
-import { accessedByLifts } from '../fragments/trailFragment';
+import { liftFragment } from './liftFragment';
+import { accessedByLifts } from './trailFragment';
 export const QUERY = gql`
   ${liftFragment}
   ${accessedByLifts}
