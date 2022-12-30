@@ -22,7 +22,7 @@
     "graphql-tag": "^2.10.1",
     "graphql-tools": "^4.0.5",
     "graphql.macro": "^1.4.2",
-    "mocha": "^6.2.2",
+    "mocha": "^10.2.0",
     "node-fetch": "^2.6.0"
   }
 }
